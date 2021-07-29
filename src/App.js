@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import marked from 'marked';
+import Prism from 'prismjs';
 import './App.css';
 
 function App() {
+  const initialState = '';
+  
+  const [content, setContent] = useState(initialState);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <textarea id="editor" onChange={(e) => {
+        setContent(marked(e.target.value));
+      }}></textarea>
+      <div id="preview" dangerouslySetInnerHTML={{ __html: content}}></div>
+    </>
   );
 }
 
