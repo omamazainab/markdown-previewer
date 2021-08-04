@@ -1,16 +1,37 @@
-code {
-  font-family: MyFancyCustomFont, monospace;
-  font-size: inherit;
+* {
+  box-sizing: border-box;
 }
 
-/* Code in text */
-p > code,
-li > code,
-dd > code,
-td > code {
-  background: #ffeff0;
-  word-wrap: break-word;
-  box-decoration-break: clone;
-  padding: .1rem .3rem .2rem;
-  border-radius: .2rem;
+html, body, #root{
+  height: 100%;
+}
+
+#wrapper{
+  display: flex;
+  flex-direction: row;
+  border: 10px solid rgb(170, 151, 255);
+  height: 100%;
+}
+
+#editor{
+  display: block;
+  width: 45%;
+}
+
+#preview{
+  width: 55%;
+  overflow: auto;
+}
+
+code{
+  background-color: grey;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+pre > code {
+  background-color: rgb(165, 159, 159);
+  color: rgb(255, 255, 255);
+  padding: 3px;
+  border-radius: 5px;
 }
