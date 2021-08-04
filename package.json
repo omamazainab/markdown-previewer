@@ -23,7 +23,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "http://gitname.github.io/react-gh-pages",
+  "homepage": "http://omamazainab.github.io/markdown-previewer",
   "eslintConfig": {
     "extends": [
       "react-app",
